@@ -1,0 +1,120 @@
+// ===============================
+// AI Assistant
+// ===============================
+
+function askAI() {
+
+    const question = prompt(
+        "🤖 AI Assistant\n\nWhat IT problem are you facing?"
+    );
+
+    if (question) {
+
+        alert(
+            "🤖 AI Assistant\n\n" +
+            "I received your issue:\n\n" +
+            question +
+            "\n\n" +
+            "Our AI support system will analyze the problem " +
+            "and suggest a solution."
+        );
+
+    }
+}
+
+
+// ===============================
+// Old Ticket Function
+// ===============================
+
+function createTicket() {
+
+    const issue = prompt(
+        "🎫 Create IT Ticket\n\nDescribe your IT problem:"
+    );
+
+    if (issue) {
+
+        alert(
+            "✅ IT Ticket Created!\n\n" +
+            "Issue: " + issue +
+            "\n\n" +
+            "Ticket ID: IT-" +
+            Math.floor(Math.random() * 9000 + 1000)
+        );
+
+    }
+}
+
+
+// ===============================
+// New Ticket Management
+// ===============================
+
+const ticketForm = document.getElementById("ticketForm");
+
+if (ticketForm) {
+
+    ticketForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const studentName =
+            document.getElementById("studentName").value;
+
+        const category =
+            document.getElementById("category").value;
+
+        const priority =
+            document.getElementById("priority").value;
+
+        const description =
+            document.getElementById("description").value;
+
+        // Generate Ticket ID
+        const ticketID =
+            "IT-" + Math.floor(Math.random() * 9000 + 1000);
+
+        // Display ticket information
+        document.getElementById("ticketResult").innerHTML = `
+
+            <h2>✅ Ticket Created Successfully!</h2>
+
+            <p>
+                <strong>🎫 Ticket ID:</strong>
+                ${ticketID}
+            </p>
+
+            <p>
+                <strong>👤 Student:</strong>
+                ${studentName}
+            </p>
+
+            <p>
+                <strong>🏷️ Category:</strong>
+                ${category}
+            </p>
+
+            <p>
+                <strong>⚠️ Priority:</strong>
+                ${priority}
+            </p>
+
+            <p>
+                <strong>📝 Problem:</strong>
+                ${description}
+            </p>
+
+            <p>
+                <strong>📌 Status:</strong>
+                Open
+            </p>
+
+        `;
+
+        // Clear the form
+        ticketForm.reset();
+
+    });
+
+}

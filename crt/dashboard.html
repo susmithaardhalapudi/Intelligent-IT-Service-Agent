@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>IT Staff Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🖥️ IT Staff Dashboard</h1>
+
+        <p>
+            Manage and monitor student IT support tickets.
+        </p>
+
+        <!-- Dashboard Statistics -->
+
+        <div class="dashboard-stats">
+
+            <div class="stat-card">
+                <h2>🎫 12</h2>
+                <p>Total Tickets</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🟠 5</h2>
+                <p>Open Tickets</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🔵 4</h2>
+                <p>In Progress</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🟢 3</h2>
+                <p>Resolved</p>
+            </div>
+
+        </div>
+
+        <!-- Recent Tickets -->
+
+        <h2 class="dashboard-title">
+            🎫 Recent IT Tickets
+        </h2>
+
+        <!-- Search Box -->
+
+        <div class="ticket-search">
+
+            <input
+                type="text"
+                id="searchTicket"
+                placeholder="🔍 Search by Ticket ID, Student or Category..."
+            >
+
+        </div>
+
+        <!-- Ticket Table -->
+
+        <div class="ticket-table">
+
+            <div class="ticket-row ticket-header">
+
+                <span>Ticket ID</span>
+                <span>Student</span>
+                <span>Category</span>
+                <span>Priority</span>
+                <span>Status</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-1024</span>
+                <span>Student 1</span>
+                <span>Wi-Fi</span>
+                <span>🔴 High</span>
+                <span>🟠 Open</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-2045</span>
+                <span>Student 2</span>
+                <span>Printer</span>
+                <span>🟡 Medium</span>
+                <span>🔵 In Progress</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-3098</span>
+                <span>Student 3</span>
+                <span>College Portal</span>
+                <span>🟢 Low</span>
+                <span>🟢 Resolved</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

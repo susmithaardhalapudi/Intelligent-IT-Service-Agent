@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: white;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #b8c7dd;
+    margin-bottom: 35px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+/* Knowledge Base */
+
+.knowledge-container {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.knowledge-card {
+    background: #111c33;
+    border: 1px solid #263654;
+    border-radius: 15px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-5px);
+    border-color: #2563eb;
+}
+
+.knowledge-card h2 {
+    margin-bottom: 15px;
+}
+
+.knowledge-card p {
+    color: #b8c7dd;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .knowledge-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Ticket Form */
+
+#ticketForm {
+    max-width: 600px;
+    margin: 30px auto;
+    background: #111c33;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #263654;
+    text-align: left;
+}
+
+#ticketForm label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#ticketForm input,
+#ticketForm select,
+#ticketForm textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #263654;
+    border-radius: 8px;
+    background: #0b1220;
+    color: white;
+    font-size: 15px;
+    outline: none;
+}
+
+#ticketForm input:focus,
+#ticketForm select:focus,
+#ticketForm textarea:focus {
+    border-color: #2563eb;
+}
+
+#ticketForm textarea {
+    resize: vertical;
+}
+
+#ticketForm button {
+    width: 100%;
+    margin-top: 25px;
+}
+
+#ticketResult {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 20px;
+    background: #111c33;
+    border: 1px solid #2563eb;
+    border-radius: 12px;
+    text-align: left;
+}
+/* ===============================
+   IT Staff Dashboard
+   =============================== */
+
+.dashboard-stats {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-card {
+    background: #111c33;
+    border: 1px solid #263654;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    border-color: #2563eb;
+}
+
+.stat-card h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.dashboard-title {
+    max-width: 1100px;
+    margin: 40px auto 20px;
+    text-align: left;
+}
+
+.ticket-table {
+    max-width: 1100px;
+    margin: auto;
+    background: #111c33;
+    border: 1px solid #263654;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.ticket-row {
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 1.2fr 1fr 1.2fr;
+    padding: 18px 20px;
+    border-bottom: 1px solid #263654;
+    align-items: center;
+}
+
+.ticket-row:last-child {
+    border-bottom: none;
+}
+
+.ticket-header {
+    background: #16233d;
+    font-weight: bold;
+}
+
+@media (max-width: 800px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ticket-table {
+        overflow-x: auto;
+    }
+
+    .ticket-row {
+        min-width: 750px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>IT Staff Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🖥️ IT Staff Dashboard</h1>
+
+        <p>
+            Manage and monitor student IT support tickets.
+        </p>
+
+        <!-- Dashboard Statistics -->
+
+        <div class="dashboard-stats">
+
+            <div class="stat-card">
+                <h2>🎫 12</h2>
+                <p>Total Tickets</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🟠 5</h2>
+                <p>Open Tickets</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🔵 4</h2>
+                <p>In Progress</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>🟢 3</h2>
+                <p>Resolved</p>
+            </div>
+
+        </div>
+
+        <!-- Recent Tickets -->
+
+        <h2 class="dashboard-title">
+            🎫 Recent IT Tickets
+        </h2>
+
+        <!-- Search Box -->
+
+        <div class="ticket-search">
+
+            <input
+                type="text"
+                id="searchTicket"
+                placeholder="🔍 Search by Ticket ID, Student or Category..."
+            >
+
+        </div>
+
+        <!-- Ticket Table -->
+
+        <div class="ticket-table">
+
+            <div class="ticket-row ticket-header">
+
+                <span>Ticket ID</span>
+                <span>Student</span>
+                <span>Category</span>
+                <span>Priority</span>
+                <span>Status</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-1024</span>
+                <span>Student 1</span>
+                <span>Wi-Fi</span>
+                <span>🔴 High</span>
+                <span>🟠 Open</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-2045</span>
+                <span>Student 2</span>
+                <span>Printer</span>
+                <span>🟡 Medium</span>
+                <span>🔵 In Progress</span>
+
+            </div>
+
+            <div class="ticket-row">
+
+                <span>IT-3098</span>
+                <span>Student 3</span>
+                <span>College Portal</span>
+                <span>🟢 Low</span>
+                <span>🟢 Resolved</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+/* ===============================
+   Login Page
+================================ */
+
+#loginForm {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 30px;
+    background: #111c33;
+    border: 1px solid #263654;
+    border-radius: 15px;
+    text-align: left;
+}
+
+#loginForm label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+#loginForm input,
+#loginForm select {
+    width: 100%;
+    padding: 13px;
+    background: #0b1220;
+    color: white;
+    border: 1px solid #263654;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+#loginForm input:focus,
+#loginForm select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+#loginForm button {
+    width: 100%;
+    margin-top: 25px;
+}
+</html>

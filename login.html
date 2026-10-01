@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - IT Service Desk</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 IT Service Desk Login</h1>
+
+        <p>Login to access the service desk.</p>
+
+        <form id="loginForm">
+
+            <label>👤 Role</label>
+
+            <select id="role" required>
+
+                <option value="">Select Role</option>
+
+                <option value="student">👨‍🎓 Student</option>
+
+                <option value="staff">🧑‍💻 IT Staff</option>
+
+                <option value="admin">👨‍💼 Admin</option>
+
+            </select>
+
+            <label>📧 Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter email"
+                required
+            >
+
+            <label>🔑 Password</label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                required
+            >
+
+            <button type="submit">
+                🔐 Login
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <script>
+
+        const form =
+            document.getElementById("loginForm");
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            const role =
+                document.getElementById("role").value;
+
+            if (role === "student") {
+
+                window.location.href = "index.html";
+
+            }
+
+            else if (role === "staff") {
+
+                window.location.href = "dashboard.html";
+
+            }
+
+            else if (role === "admin") {
+
+                document.getElementById("message").textContent =
+                    "👨‍💼 Admin dashboard will be added next.";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

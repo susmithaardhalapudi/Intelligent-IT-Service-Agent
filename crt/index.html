@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Intelligent IT Service Desk</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🤖 Intelligent IT Service Desk</h1>
+
+        <p>
+            Welcome to our AI-powered IT support system.
+        </p>
+
+        <div class="buttons">
+
+            <!-- AI Assistant -->
+            <button onclick="askAI()">
+                🤖 Ask AI Assistant
+            </button>
+
+            <!-- Create IT Ticket -->
+            <a href="ticket.html">
+                <button>
+                    🎫 Create IT Ticket
+                </button>
+            </a>
+
+            <!-- Knowledge Base -->
+            <a href="knowledge.html">
+                <button>
+                    📚 Knowledge Base
+                </button>
+            </a>
+
+            <!-- IT Staff Dashboard -->
+            <a href="dashboard.html">
+                <button>
+                    🖥️ IT Staff Dashboard
+                </button>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- AI Assistant JavaScript -->
+    <script>
+
+        function askAI() {
+
+            const question = prompt(
+                "🤖 AI Assistant\n\nWhat IT problem are you facing?"
+            );
+
+            if (question) {
+
+                alert(
+                    "🤖 AI Assistant\n\n" +
+                    "I received your issue:\n\n" +
+                    question +
+                    "\n\n" +
+                    "Our AI support system will analyze the problem " +
+                    "and suggest a solution."
+                );
+
+            }
+
+        }
+
+    </script>
+
+
+    <!-- Main JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
